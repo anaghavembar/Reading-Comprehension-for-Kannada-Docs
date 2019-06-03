@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Answer</title>
+    <!--
+
+    Template 2085 Neuron
+
+    http://www.tooplate.com/view/2085-neuron
+
+    -->
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/magnific-popup.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+    <style>
+    body {
+      background: url("static/images/gradient.jpg") ;
+    }
+    </style>
+    </head>
+
+
+  <body background="/static/images/demo.jpg">
+    <!-- PRE LOADER -->
+
+    <div class="preloader">
+         <div class="sk-spinner sk-spinner-wordpress">
+              <span class="sk-inner-circle"></span>
+         </div>
+    </div>
+
+    <!-- Navigation section  -->
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+         <div class="container">
+
+              <div class="navbar-header">
+                   <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                   </button>
+                   <a href="index.html" class="navbar-brand">Kannada Reading Comprehension</a>
+              </div>
+              <div class="collapse navbar-collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http://localhost:5000/">Home</a></li>
+                        <li ><a href="http://localhost:5000/Demo">Demo</a></li>
+                        <!-- Trigger/Open The Modal -->
+
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p><b>The Document Term Matrix is : </b><br>{{vec}}</p>
+                            <p><b>The Cosine Similarity matrix for the passage and question are : </b><br>{{listofsim}}</p>
+
+                          </div>
+
+                        </div>
+                   </ul>
+              </div>
+
+      </div>
+    </div>
+    The highlighted sentence could be the answer to your question<br><br>
+    Passage : <br>{{ucorpus}}<mark>{{result}}</mark>{{lcorpus}}<br><br>
+    Query : <br> {{question}} <br><br>
+    Answer : <br> {{result}} <br>
+    <button id="myBtn">Show Metadata</button>
+
+  </body>
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  <script src="../static/js/jquery.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/particles.min.js"></script>
+  <script src="../static/js/app.js"></script>
+  <script src="../static/js/jquery.parallax.js"></script>
+  <script src="../static/js/smoothscroll.js"></script>
+  <script src="../static/js/custom.js"></script>
+</html>

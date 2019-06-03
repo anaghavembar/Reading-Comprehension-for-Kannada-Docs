@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Demo</title>
+    <!--
+
+    Template 2085 Neuron
+
+    http://www.tooplate.com/view/2085-neuron
+
+    -->
+
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/magnific-popup.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <!--link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet"-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <style>
+    body {
+      background: url("static/images/gradient.jpg") ;
+    }
+
+$turquoise: #1abc9c;
+    .butt {
+      background-color: #2F4F4F;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+
+    .button1:hover {
+      background-color: #33334d;
+      color: white;
+    }
+
+    input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+    </style>
+    </head>
+
+    <title>Reading Comprehension Demo</title>
+  </head>
+
+  <body background="/static/images/demo.jpg">
+    <!-- PRE LOADER -->
+
+    <div class="preloader">
+         <div class="sk-spinner sk-spinner-wordpress">
+              <span class="sk-inner-circle"></span>
+         </div>
+    </div>
+
+    <!-- Navigation section  -->
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+         <div class="container">
+
+              <div class="navbar-header">
+                   <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                   </button>
+                   <a href="index.html" class="navbar-brand">Kannada Reading Comprehension</a>
+              </div>
+              <div class="collapse navbar-collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http://localhost:5000/">Home</a></li>
+                        <li class="active"><a href="http://localhost:5000/Demo">Demo</a></li>
+                   </ul>
+              </div>
+
+      </div>
+    </div>
+
+    <!-- Form section -->
+    <div style="position:absolute; left:150px; top:100px;">
+      <br>
+      <br>
+    <form name="enterQuery" method="post" action = "http://localhost:5000/getAnswer">
+      <label for="passage" padding="18px">Enter Passage :</label> <br>
+      <textarea name="passage" rows="8" cols="80" placeholder="Enter passage here" charset="utf-8" onKeyDown="toggleKBMode(event)" onKeyPress="javascript:convertThis(event)"></textarea><br>
+
+
+      <label for="question">Enter Query:</label><br>
+      <textarea type="text" name="question" rows="2" cols="80" placeholder="Enter question here" charset="utf-8" onKeyDown="toggleKBMode(event)" onKeyPress="javascript:convertThis(event)"></textarea><br>
+      <!--textarea readonly name="name" rows="8" cols="80" ></textarea-->
+      <input type=checkbox onclick="showMap(this)"> Show Keymap<br><br>
+      <!--input type = "submit" value = "submit" /-->
+      <button class="butt button1">Get Answer</button>
+
+
+
+    </div>
+  </body>
+
+  <script src="../static/js/jquery.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/particles.min.js"></script>
+  <script src="../static/js/app.js"></script>
+  <script src="../static/js/jquery.parallax.js"></script>
+  <script src="../static/js/smoothscroll.js"></script>
+  <script src="../static/js/custom.js"></script>
+  <SCRIPT language=JavaScript src="http://www.higopi.com/script/ucedit/common.js"></SCRIPT>
+  <SCRIPT language=JavaScript src="http://www.higopi.com/script/ucedit/kannada.js"></SCRIPT>
+
+</html>
