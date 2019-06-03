@@ -215,6 +215,14 @@ class Tfidf:
         for index in final_list:
             summary.append((vocab[index[0]]))
         """
-
+        flag=0
+        for i in range(0,len(simofans)-1):
+            if simofans[i]==0:
+                flag=flag+1
+        if flag==len(simofans)-1:
+            errormsg="Could not find an answer to your question"
+        else:
+            errormsg=" "
+        print(flag)
         summary=self.getImportantWords(lemmas)
-        return answer,self.question,first,last,vec,listofsim,simofans
+        return answer,self.question,first,last,vec,listofsim,simofans,errormsg
