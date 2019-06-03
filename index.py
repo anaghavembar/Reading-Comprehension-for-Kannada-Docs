@@ -20,8 +20,8 @@ def result():
 	   passage = request.form.get("passage")
 	   question = request.form.get("question")
 	   tfidfobj = tfidf.Tfidf(passage, question)
-	   result,question,ucorpus,lcorpus,vec,listofsim,simofans=tfidfobj.tfidfCalculator()
-	   return render_template("getAnswer.html",result = result,question=question,ucorpus=ucorpus,lcorpus=lcorpus,vec=vec,listofsim=listofsim,simofans=simofans)
+	   result,question,ucorpus,lcorpus,vec,listofsim,simofans,errormsg=tfidfobj.tfidfCalculator()
+	   return render_template("getAnswer.html",result = result,question=question,ucorpus=ucorpus,lcorpus=lcorpus,vec=vec,listofsim=listofsim,simofans=simofans,errormsg=errormsg)
 
 if __name__ == "__main__":
 	app.run(debug=True)
